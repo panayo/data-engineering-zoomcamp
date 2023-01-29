@@ -43,9 +43,7 @@
 
 - In the menu select Compute Engine and then VM Instances.
 
-
-![[vm_instances.png]]
-
+![vm_instances](images/vm_instances.png)
 
 ## <a name = "3">3. Generate SSH keys</a>
 
@@ -68,8 +66,7 @@ In the terminal :
 - Click to create new instance.
 - Set the following setup and click create.
 
-![[vm_setup.png]]
-
+![vm_setup](images/vm_setup.png)
 
 ## <a name = "5">5. SSH into the VM</a>
 
@@ -112,12 +109,9 @@ IdentityFile
 - Select in the upper selection tab : Connect to Host
 - It will detect automatically the de-zoomcamp connection (thanks to the config file).
 - The VSCode will relaunch directly on the VM.
-
-![[vscode_rm_ssh_1.png]]
-
-![[vscode_rm_ssh_2.png]]
-
-![[vscode_rm_ssh_3.png]]
+![vscode_rm_ssh_1](images/vscode_rm_ssh_1.png)
+![vscode_rm_ssh_2](images/vscode_rm_ssh_2.png)
+![vscode_rm_ssh_3](images/vscode_rm_ssh_3.png)
 
 
 ## <a name = "9">9. Configure the VM</a>
@@ -168,9 +162,9 @@ docker: Got permission denied while trying to connect to the Docker daemon socke
 - Because of the existence of the docker-compose.yaml we can run the ```docker-compose up -d``` (-d for detach mode).
 - When the dowloading/creation is finished run ```docker ps``` to see the created containers (see following image).
 - The docker compose yaml file contains two images (postgres and pgadmin).
-![[docker_ps_cmd.png]]
+![docker_ps_cmd](images/docker_ps_cmd.png)
 
-![[docker_compose_yaml.png]]
+![docker_compose_yaml](images/docker_compose_yaml.png)
 ## <a name = "11">11.  Install PGCLI (command line interface for Postgres )</a>
 
 - **Install via conda**,is better than pip for this package.
@@ -182,8 +176,7 @@ docker: Got permission denied while trying to connect to the Docker daemon socke
 - Now (after the ```pgcli -h localhost -U root -d ny_taxi```) you can test with ```\dt``` command to see the list of tables (ignore the red warning).
 - To exit : CTRL+D
 
-![[pgcli.png]]
-
+![pgcli](images/pgcli.png)
 ## <a name = "12">12. Port forward : postgres, pgAdmin and Jupyter in our local machine</a>
   
 ### <a name = "12.1">12.1. Postgres</a>
@@ -209,10 +202,8 @@ docker: Got permission denied while trying to connect to the Docker daemon socke
 - Don't be confused with the address given in the vm terminal which it will always be localhost:8888...
 - Copy past the correct address (i.e. http://localhost:64565/) in your local web browser and copy paste the token generate in the vn terminal (after the ```jupyter notebook``` command).
 
-
-![[docker_ps_cmd.png]]
-![[port_forwarding.png]]
-
+![docker_ps_cmd](images/docker_ps_cmd.png)
+![port_forwarding](images/port_forwarding.png)
 
 ## <a name = "13">13. Run upload-data notebook, create database and populate it (via this notebook)</a>
 
@@ -223,7 +214,7 @@ docker: Got permission denied while trying to connect to the Docker daemon socke
 - When in the notebook this command is executed (```df.head(n=0).to_sql(name='yellow_taxi_data', con=engine, if_exists='replace')```)
 - You can list the availabe tables in the postgres ```\dt``` before and after.
 
-![[postgres_before_after.png]]
+![postgres_before_after](images/postgres_before_after.png)
 
 ## <a name = "14">14. Terraform</a>
 
@@ -258,16 +249,16 @@ I stored the json (```ny-rides-panayotis.json```) file inside a folder called .g
 - Set up the google application credentials to point to the environemental variables : ```export GOOGLE_APPLICATION_CREDENTIALS=~/.gc/ny-rides-panayotis.json```
 - Authenticate the CLI : ```gcloud auth activate-service-account --key-file $GOOGLE_APPLICATION_CREDENTIALS```
 
-![[auth_gcloud_cli.png]]
+![auth_gcloud_cli](images/auth_gcloud_cli.png)
 
 ### <a name = "14.4">14.4. Run Terraform Commands</a>
 
 - Go to the terraform folder of the project : ```cd ~/data-engineering-zoomcamp/week_1_basics_n_setup/1_terraform_gcp/terraform/```
 - Initialize terraform : ```terraform init```
-![[terraform_init.png]]
+![terraform_init](images/terraform_init.png)
 - Run the command : ```terraform plan```
 - The GCP Project ID is the name of the project : ny-rydes-panayotis
-![[project_id.png]]
+![project_id](images/project_id.png)
 
 - Optionally you can configure your terraform files (`variables.tf`) to include your project id:
 ```bash
