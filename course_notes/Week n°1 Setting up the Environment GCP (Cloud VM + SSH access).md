@@ -1,14 +1,30 @@
-## Table of 
-
-
-
-
+## Table of content
 
 - <a href ="#1"> 1 . Steps for Creating a New Project in GCP </a>
 - <a href ="#2">2. Create the VM instance</a>
 - <a href ="#3">3. Generate SSH keys</a>
-
-  
+- <a href ="#4">3. Create the VM Instance</a>
+- <a href ="#5">5. SSH into the VM</a>
+- <a href ="#6">6. Download and install Anaconda</a>
+- <a href ="#7">7. Configure VM and setup local ~/.ssh/config</a>
+- <a href ="#8">8. Install docker & Setup the VScode to SSH directly</a>
+- <a href ="#9">9. Configure the VM</a>
+	- <a href ="#9.1">9.1. Pull the git repo of the course</a>
+	- <a href ="#9.2">9.2. Docker Configuration</a>
+	- <a href ="#9.3">9.3. Install docker-compose</a>
+- <a href ="#10">10. Launch with docker compose the course image</a>
+- <a href ="#11">11. Install PGCLI (command line interface for Postgres)</a>
+- <a href ="#12">12. Port forward : postgres, pgAdmin and Jupyter in our local machine</a>
+	- <a href ="#12.1">12.1. Postgres</a>
+	- <a href ="#12.2">12.2. PgAdmin</a>
+	- <a href ="#12.3">12.3. Jupyter</a>
+- <a href ="#13">13. Run upload-data notebook, create database and populate it (via this notebook)</a>
+- <a href ="#14">14. Terraform</a>
+	- <a href ="#14.1">14.1. Install terraform</a>
+	- <a href ="#14.2">14.2. SFTP Google credentials To the VM</a>
+	- <a href ="#14.3">14.3. Configure the Google Cloud CLI</a>
+	- <a href ="#14.4">14.4. Run Terraform Commands</a>
+- <a href ="#15">15. Shut down the VM and Update the config file</a>
 
 ## <a name = "1">1. Steps for Creating a New Project in GCP</a>
 
@@ -270,7 +286,7 @@ variable "project" {
 Then you need to give your service account all the permissions. 
 
 
-## <a name = "15">15. Shut dwn the VM and Update the config file</a>
+## <a name = "15">15. Shut down the VM and Update the config file</a>
 
 ### <a name = "15.1">15.1 From the terminal</a>
 
@@ -279,7 +295,7 @@ Then you need to give your service account all the permissions.
 ### <a name = "15.2">15.2 From the web interface</a>
 
 - From the web :
-![[shutdown_vm.png]]
+![shutdown_vm](shutdown_vm.png)
 
 ### <a name = "15.3">15.3 Update the config file</a>
 
