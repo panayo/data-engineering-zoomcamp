@@ -295,7 +295,7 @@ Then you need to give your service account all the permissions.
 ### <a name = "15.2">15.2 From the web interface</a>
 
 - From the web :
-![shutdown_vm](shutdown_vm.png)
+![../images/shutdown_vm](shutdown_vm.png)
 
 ### <a name = "15.3">15.3 Update the config file</a>
 
